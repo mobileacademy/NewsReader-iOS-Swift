@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             story.title = "title \(i+1)"
             story.desc  = "desc \(i+1)"
             story.url   = "http://myapi.com/?id=\(i+1).json"
+            story.id    = "\(i)"
             
             dataSource.addStory(story:story)
         }

@@ -12,4 +12,5 @@ class StoryModel{
     var title:String = ""
     var desc:String = ""
     var url:String = ""
+    var id:String = ""
 }
