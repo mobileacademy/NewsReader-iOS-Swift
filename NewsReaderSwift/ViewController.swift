@@ -33,6 +33,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell = UITableViewCell(style: .default, reuseIdentifier: "identifier" )
         }
         
+        cell.textLabel?.text = dataSource[ indexPath.row ]
+        
         return cell
     }
 

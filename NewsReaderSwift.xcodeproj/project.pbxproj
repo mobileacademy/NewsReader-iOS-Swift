@@ -12,6 +12,7 @@
 		8E3D937F1DA77F0200A033EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D937D1DA77F0200A033EA /* Main.storyboard */; };
 		8E3D93811DA77F0200A033EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D93801DA77F0200A033EA /* Assets.xcassets */; };
 		8E3D93841DA77F0200A033EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D93821DA77F0200A033EA /* LaunchScreen.storyboard */; };
+		8E3D938D1DA7981A00A033EA /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D938C1DA7981A00A033EA /* StoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8E3D93801DA77F0200A033EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E3D93831DA77F0200A033EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E3D93851DA77F0200A033EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3D938C1DA7981A00A033EA /* StoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		8E3D93781DA77F0200A033EA /* NewsReaderSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8E3D938B1DA797F700A033EA /* Model */,
 				8E3D93791DA77F0200A033EA /* AppDelegate.swift */,
 				8E3D937B1DA77F0200A033EA /* ViewController.swift */,
 				8E3D937D1DA77F0200A033EA /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				8E3D93851DA77F0200A033EA /* Info.plist */,
 			);
 			path = NewsReaderSwift;
+			sourceTree = "<group>";
+		};
+		8E3D938B1DA797F700A033EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E3D938C1DA7981A00A033EA /* StoryModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				8E3D937C1DA77F0200A033EA /* ViewController.swift in Sources */,
 				8E3D937A1DA77F0200A033EA /* AppDelegate.swift in Sources */,
+				8E3D938D1DA7981A00A033EA /* StoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
