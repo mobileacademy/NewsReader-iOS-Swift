@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class StoryModel{
+    var title:String = ""
+    var desc:String = ""
+    var url:String = ""
+}
