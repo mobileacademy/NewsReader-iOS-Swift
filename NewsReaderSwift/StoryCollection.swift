@@ -18,4 +18,8 @@ class StoryCollection{
         
         return Array(data[ 0 ..< 10 ])
     }
+    
+    func addStory(story:StoryModel){
+        data.append(story)
+    }
 }
