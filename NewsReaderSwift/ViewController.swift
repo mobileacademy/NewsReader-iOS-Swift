@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var dataSource = [ "title 1", "title 2", "title 3", "title 4", "title 5"]
+    
+    static let cellID = "identifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +29,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "identifier")
+        var cell:UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: ViewController.cellID)
     
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "identifier" )
+            cell = UITableViewCell(style: .default, reuseIdentifier: ViewController.cellID )
         }
         
         cell.textLabel?.text = dataSource[ indexPath.row ]
