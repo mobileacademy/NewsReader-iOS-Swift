@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class StoryCell: UITableViewCell{
-    
+    @IBOutlet weak var titleLabel: UILabel!
 }
