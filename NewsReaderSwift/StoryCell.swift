@@ -11,4 +11,5 @@ import UIKit
 
 class StoryCell: UITableViewCell{
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
 }

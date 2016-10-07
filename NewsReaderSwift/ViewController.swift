@@ -48,7 +48,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier:ViewController.cellID, for: indexPath)
         
-        (cell as! StoryCell).titleLabel?.text = dataSource.topStories()[ indexPath.row ].title
+        if let storyCell = cell as? StoryCell{
+            storyCell.titleLabel?.text = dataSource.topStories()[ indexPath.row ].title
+            storyCell.idLabel?.text = dataSource.topStories()[ indexPath.row ].id
+        }
+        
         
         return cell
     }

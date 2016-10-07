@@ -35,13 +35,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scc-mk-jkM">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="leadingMargin" secondItem="vhz-cq-EYM" secondAttribute="leading" id="H0w-1h-ezX"/>
                                                 <constraint firstItem="vhz-cq-EYM" firstAttribute="centerY" secondItem="M6W-wq-Tpc" secondAttribute="centerY" id="KQk-DL-cKq"/>
+                                                <constraint firstItem="scc-mk-jkM" firstAttribute="centerY" secondItem="M6W-wq-Tpc" secondAttribute="centerY" id="hZm-dN-UCP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="scc-mk-jkM" secondAttribute="trailing" id="xON-iS-l22"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="idLabel" destination="scc-mk-jkM" id="v48-zS-4Hp"/>
                                             <outlet property="titleLabel" destination="vhz-cq-EYM" id="aIe-cp-wz5"/>
                                         </connections>
                                     </tableViewCell>
