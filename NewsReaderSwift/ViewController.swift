@@ -27,7 +27,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        var cell = tableView.dequeueReusableCell(withIdentifier: "identifier")
+    
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "identifier" )
+        }
+        
+        return cell!
     }
 
 }
