@@ -10,9 +10,25 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var dataSource = [ "title 1", "title 2", "title 3", "title 4", "title 5"]
+    var dataSource:StoryCollection
     
     static let cellID = "identifier"
+    
+    required init?(coder aDecoder: NSCoder){
+        dataSource = StoryCollection()
+        
+        for i in 0 ..< 20 {
+            let story = StoryModel()
+            
+            story.title = "title \(i+1)"
+            story.desc  = "desc \(i+1)"
+            story.url   = "http://myapi.com/?id=\(i+1).json"
+            
+            dataSource.addStory(story:story)
+        }
+        
+        super.init(coder:aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return dataSource.topStories().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell = UITableViewCell(style: .default, reuseIdentifier: ViewController.cellID )
         }
         
-        cell.textLabel?.text = dataSource[ indexPath.row ]
+        cell.textLabel?.text = dataSource.topStories()[ indexPath.row ].title
         
         return cell
     }
