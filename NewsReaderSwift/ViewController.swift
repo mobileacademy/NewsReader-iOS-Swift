@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var dataSource:StoryCollection
     
-    static let cellID = "identifier"
+    static let cellID = "storyCellID"
     
     required init?(coder aDecoder: NSCoder){
         dataSource = StoryCollection()
@@ -45,13 +45,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: ViewController.cellID)
-    
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: ViewController.cellID )
-        }
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier:ViewController.cellID, for: indexPath)
         
-        cell.textLabel?.text = dataSource.topStories()[ indexPath.row ].title
+        (cell as! StoryCell).titleLabel?.text = dataSource.topStories()[ indexPath.row ].title
         
         return cell
     }
