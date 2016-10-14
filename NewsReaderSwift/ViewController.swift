@@ -22,6 +22,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         HackerNews.instance.fetchTopStory { (stories:Array<Story>) in
             self.stories = stories
             self.tableView.reloadData()
+            
+            for (index, story) in stories.enumerated() {
+                HackerNews.instance.fillStory(story:story, callback: { (story:Story?) in
+                    print(story)
+                    self.stories![index] = story!
+                    DispatchQueue.main.async {
+                        self.tableView.reloadRows(at: [IndexPath(row:index, section:0)], with: .right)
+                    }
+                })
+            }
         }
     }
 

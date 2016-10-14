@@ -32,6 +32,7 @@ class Story : Mappable{
     
     func mapping(map: Map) {
         id <- map["id"]
+        title <- map["title"]
     }
 }
 
@@ -54,5 +55,17 @@ class HackerNews {
             })
             callback(stories)
         }
+    }
+    
+    func fillStory(story:Story, callback:@escaping (_ story:Story?) -> Void){
+        let url = "https://hacker-news.firebaseio.com/v0/item/\(story.id!).json"
+        Alamofire.request(url).responseObject { (response: DataResponse<Story>) in
+            guard let story = response.result.value else {
+                callback(nil);
+                return;
+            }
+            callback(story)
+        }
+
     }
 }
