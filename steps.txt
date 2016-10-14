@@ -1,0 +1,5 @@
+1.
+
+    touch Podfile
+    pod install
+    use NewsReaderSwift.xcworkspace instead of *.xcworkspace
