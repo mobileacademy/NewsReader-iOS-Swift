@@ -16,19 +16,43 @@ import AlamofireObjectMapper
 //  https://hacker-news.firebaseio.com/v0/askstories.json?print=pretty
 //      https://hacker-news.firebaseio.com/v0/item/12707606.json?print=pretty
 
-class Story{
+class Story : Mappable{
     var id:Int?
     var title:String?
     var descendants:Int?
     var url:String?
     
+    
+    required init?(map: Map){
+    }
+    
+    init?(){
+        
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+    }
 }
 
 class HackerNews {
     static let instance = HackerNews()
     
-    func fetchTopStory(_ callback:(_ stories:Array<Story>) -> Void){
-        var url = "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty"
-
+    func fetchTopStory(_ callback:@escaping (_ stories:Array<Story>) -> Void){
+        let url = "https://hacker-news.firebaseio.com/v0/topstories.json"
+        
+        Alamofire.request(url).responseJSON{ response in
+            guard let ids = response.result.value as! Array<Int>? else {
+                callback([]);
+                return;
+            }
+            let stories:Array<Story> = ids.map({
+                let story = Story()
+                story?.id = $0
+                story?.title = "not yet parsed"
+                return story!
+            })
+            callback(stories)
+        }
     }
 }

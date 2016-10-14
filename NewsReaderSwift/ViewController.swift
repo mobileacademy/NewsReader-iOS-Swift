@@ -10,25 +10,19 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var dataSource:StoryCollection
+    var stories:Array<Story>?
     
     static let cellID = "storyCellID"
     
+    @IBOutlet weak var tableView: UITableView!
+    
     required init?(coder aDecoder: NSCoder){
-        dataSource = StoryCollection()
-        
-        for i in 0 ..< 20 {
-            let story = StoryModel()
-            
-            story.title = "title \(i+1)"
-            story.desc  = "desc \(i+1)"
-            story.url   = "http://myapi.com/?id=\(i+1).json"
-            story.id    = "\(i)"
-            
-            dataSource.addStory(story:story)
-        }
-        
         super.init(coder:aDecoder)
+        
+        HackerNews.instance.fetchTopStory { (stories:Array<Story>) in
+            self.stories = stories
+            self.tableView.reloadData()
+        }
     }
 
     override func viewDidLoad() {
@@ -42,15 +36,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.topStories().count
+        if stories == nil{
+            return 0
+        }
+        
+        return stories!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier:ViewController.cellID, for: indexPath)
         
         if let storyCell = cell as? StoryCell{
-            storyCell.titleLabel?.text = dataSource.topStories()[ indexPath.row ].title
-            storyCell.idLabel?.text = dataSource.topStories()[ indexPath.row ].id
+            storyCell.titleLabel?.text = stories![ indexPath.row ].title
+            storyCell.idLabel?.text = String(stories![ indexPath.row ].id!)
         }
         
         
