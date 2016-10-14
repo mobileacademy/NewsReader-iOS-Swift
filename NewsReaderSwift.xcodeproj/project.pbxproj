@@ -15,6 +15,7 @@
 		8E3D938D1DA7981A00A033EA /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D938C1DA7981A00A033EA /* StoryModel.swift */; };
 		8E3D938F1DA79A1400A033EA /* StoryCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D938E1DA79A1400A033EA /* StoryCollection.swift */; };
 		8E3D93931DA7A2EB00A033EA /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D93921DA7A2EB00A033EA /* StoryCell.swift */; };
+		91CFCD5F1DB1576F006B6BB5 /* HackerNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFCD5E1DB1576F006B6BB5 /* HackerNews.swift */; };
 		B2A8F4CFD3A2A1B7A3BEEE17 /* Pods_NewsReaderSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E845044B7FB82D08B65FDF /* Pods_NewsReaderSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		8E3D938C1DA7981A00A033EA /* StoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		8E3D938E1DA79A1400A033EA /* StoryCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollection.swift; sourceTree = "<group>"; };
 		8E3D93921DA7A2EB00A033EA /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		91CFCD5E1DB1576F006B6BB5 /* HackerNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNews.swift; sourceTree = "<group>"; };
 		B0DDE834BD6D967DDC4DFF52 /* Pods-NewsReaderSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReaderSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReaderSwift/Pods-NewsReaderSwift.release.xcconfig"; sourceTree = "<group>"; };
 		C6E845044B7FB82D08B65FDF /* Pods_NewsReaderSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsReaderSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEACC830549D2B5BB637DD0F /* Pods-NewsReaderSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReaderSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReaderSwift/Pods-NewsReaderSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				8E3D93801DA77F0200A033EA /* Assets.xcassets */,
 				8E3D93821DA77F0200A033EA /* LaunchScreen.storyboard */,
 				8E3D93851DA77F0200A033EA /* Info.plist */,
+				91CFCD5E1DB1576F006B6BB5 /* HackerNews.swift */,
 			);
 			path = NewsReaderSwift;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91CFCD5F1DB1576F006B6BB5 /* HackerNews.swift in Sources */,
 				8E3D937C1DA77F0200A033EA /* ViewController.swift in Sources */,
 				8E3D938F1DA79A1400A033EA /* StoryCollection.swift in Sources */,
 				8E3D937A1DA77F0200A033EA /* AppDelegate.swift in Sources */,
