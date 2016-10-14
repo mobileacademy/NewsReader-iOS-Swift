@@ -33,6 +33,7 @@ class Story : Mappable{
     func mapping(map: Map) {
         id <- map["id"]
         title <- map["title"]
+        url <- map["url"]
     }
 }
 
@@ -50,10 +51,10 @@ class HackerNews {
             let stories:Array<Story> = ids.map({
                 let story = Story()
                 story?.id = $0
-                story?.title = "not yet parsed"
+                story?.title = "..."
                 return story!
             })
-            callback(stories)
+            callback(Array(stories.prefix(15)))
         }
     }
     
@@ -64,6 +65,7 @@ class HackerNews {
                 callback(nil);
                 return;
             }
+            print(story.url)
             callback(story)
         }
 
