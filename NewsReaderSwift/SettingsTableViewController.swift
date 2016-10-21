@@ -16,11 +16,11 @@ class SettingsTableViewController: UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        bgSwitch.isOn =  UserDefaults.standard.bool(forKey: "bg")
+        bgSwitch.isOn =  UserDefaults.standard.bool(forKey: SettingsKey.BG.rawValue)
     }
     
     @IBAction func toggleSwitch(_ sender: UISwitch) {
-        UserDefaults.standard.set( sender.isOn, forKey: "bg")
+        UserDefaults.standard.set( sender.isOn, forKey: SettingsKey.BG.rawValue)
         UserDefaults.standard.synchronize()
     }
 }
