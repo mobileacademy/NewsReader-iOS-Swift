@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum StoyType{
+enum StoryType{
     case Top
     case Latest
 }
