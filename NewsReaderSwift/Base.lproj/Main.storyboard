@@ -24,7 +24,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storyCellID" id="CF7-Gb-sxM" customClass="StoryCell" customModule="NewsReaderSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CF7-Gb-sxM" id="M6W-wq-Tpc">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -142,6 +142,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="top_stories_id" id="7HD-l9-HQr"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dHQ-Df-txM">
                                         <rect key="frame" x="0.0" y="143" width="375" height="44"/>
@@ -159,6 +162,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="latest_stories_id" id="kSk-eA-7hP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -168,7 +174,9 @@
                             <outlet property="delegate" destination="hwA-h4-SVI" id="LPm-iV-X8A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Alege categorie" id="zt1-wf-Uqn"/>
+                    <navigationItem key="navigationItem" title="Alege categorie" id="zt1-wf-Uqn">
+                        <barButtonItem key="backBarButtonItem" title="back" id="g1w-L1-pGS"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eA1-wC-TWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,4 +199,7 @@
             <point key="canvasLocation" x="-1377" y="99"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kSk-eA-7hP"/>
+    </inferredMetricsTieBreakers>
 </document>
