@@ -64,6 +64,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    
+    // segue - navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let story =  self.stories?[(self.tableView.indexPathForSelectedRow?.row)!]
+        let browserView = segue.destination as! BrowserViewController
+        
+        browserView.url = story?.url
+        
+    }
 
 }
 

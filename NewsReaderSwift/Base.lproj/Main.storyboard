@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mq1-dr-DfO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewsReaderSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Top stories" id="BYZ-38-t0r" customClass="ViewController" customModule="NewsReaderSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storyCellID" id="CF7-Gb-sxM" customClass="StoryCell" customModule="NewsReaderSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CF7-Gb-sxM" id="M6W-wq-Tpc">
                                             <frame key="frameInset" width="375" height="43.5"/>
@@ -42,6 +42,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vhz-cq-EYM" secondAttribute="trailing" constant="80" id="EHT-HF-OYQ"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="vhz-cq-EYM" secondAttribute="leading" id="H0w-1h-ezX"/>
                                                 <constraint firstItem="vhz-cq-EYM" firstAttribute="centerY" secondItem="M6W-wq-Tpc" secondAttribute="centerY" id="KQk-DL-cKq"/>
                                                 <constraint firstItem="scc-mk-jkM" firstAttribute="centerY" secondItem="M6W-wq-Tpc" secondAttribute="centerY" id="hZm-dN-UCP"/>
@@ -51,6 +52,7 @@
                                         <connections>
                                             <outlet property="idLabel" destination="scc-mk-jkM" id="v48-zS-4Hp"/>
                                             <outlet property="titleLabel" destination="vhz-cq-EYM" id="aIe-cp-wz5"/>
+                                            <segue destination="RJM-SO-jLC" kind="show" id="BES-PX-nki"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -67,13 +69,68 @@
                             <constraint firstItem="dHq-K7-L26" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="s9U-1z-UKz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Top stories" id="X5o-NY-3gL"/>
                     <connections>
                         <outlet property="tableView" destination="dHq-K7-L26" id="j5G-cy-nzo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="658" y="100"/>
+        </scene>
+        <!--browser-->
+        <scene sceneID="5Rx-Kf-QzI">
+            <objects>
+                <viewController id="RJM-SO-jLC" customClass="BrowserViewController" customModule="NewsReaderSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nqJ-bU-tAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="K2p-TS-f62"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OMl-Ss-oGV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEZ-o6-XZd">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ytn-Ln-dFI">
+                                <frame key="frameInset" minX="181" minY="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bEZ-o6-XZd" firstAttribute="width" secondItem="OMl-Ss-oGV" secondAttribute="width" id="5Oa-6v-MqS"/>
+                            <constraint firstItem="bEZ-o6-XZd" firstAttribute="centerX" secondItem="OMl-Ss-oGV" secondAttribute="centerX" id="6e3-WL-CtE"/>
+                            <constraint firstItem="bEZ-o6-XZd" firstAttribute="height" secondItem="OMl-Ss-oGV" secondAttribute="height" id="jVQ-XF-7Xl"/>
+                            <constraint firstItem="bEZ-o6-XZd" firstAttribute="centerY" secondItem="OMl-Ss-oGV" secondAttribute="centerY" id="v4W-9d-9GC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="browser" id="nsB-c0-luX"/>
+                    <connections>
+                        <outlet property="indicator" destination="ytn-Ln-dFI" id="2gO-dh-Z2Q"/>
+                        <outlet property="webview" destination="bEZ-o6-XZd" id="1WD-F5-klH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPj-ej-vOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="99.400299850074973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HHl-b5-3Pd">
+            <objects>
+                <navigationController id="Mq1-dr-DfO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Way-QB-ZLd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oBA-Vx-mFh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZK-Fb-NJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="101"/>
         </scene>
     </scenes>
 </document>
