@@ -13,6 +13,20 @@ class MenuTableViewController: UITableViewController{
     let topStoriesId = "top_stories_id"
     let latestStoriesId = "latest_stories_id"
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.standard.bool( forKey:SettingsKey.BG.rawValue ) == false {
+            tableView.backgroundView = nil
+            return
+        }
+        
+        let imageView = UIImageView(image: UIImage(named:"bg1.jpg") )
+        imageView.contentMode = .scaleAspectFill
+        
+        tableView.backgroundView = imageView
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let id = segue.identifier else {
