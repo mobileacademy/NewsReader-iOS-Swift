@@ -51,7 +51,10 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
             
             let path = NSHomeDirectory()+"/Documents/bg.png"
             
-            try? data.write(to: URL(fileURLWithPath: path) )
+            try? data.write(to: URL(fileURLWithPath: path), options: .atomic )
+            
+            UserDefaults.standard.set( true, forKey:SettingsKey.CustomImage.rawValue )
+            UserDefaults.standard.synchronize()
         }
     }
 }
