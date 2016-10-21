@@ -251,6 +251,30 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EnZ-uQ-ZWp" id="Zge-E9-PuZ">
                                             <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BG Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D5-cq-MYh">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-0a-cWe">
+                                                    <segments>
+                                                        <segment title="1" width="34"/>
+                                                        <segment title="2" width="34"/>
+                                                        <segment title="3" width="34"/>
+                                                        <segment title="4" width="34"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="bgSegmentValueChanged:" destination="vDA-mX-hYM" eventType="valueChanged" id="H4z-bX-LdS"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0D5-cq-MYh" firstAttribute="centerY" secondItem="Zge-E9-PuZ" secondAttribute="centerY" id="5Vc-tI-FcI"/>
+                                                <constraint firstItem="3bS-0a-cWe" firstAttribute="centerY" secondItem="Zge-E9-PuZ" secondAttribute="centerY" id="8zb-22-N5l"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3bS-0a-cWe" secondAttribute="trailing" id="U7B-hn-74Z"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="0D5-cq-MYh" secondAttribute="leading" id="cgB-os-al0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -291,6 +315,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="95G-P3-6AH"/>
                     <connections>
+                        <outlet property="bgSegment" destination="3bS-0a-cWe" id="6yL-AR-qa5"/>
                         <outlet property="bgSwitch" destination="tMC-cF-Or0" id="n2K-Sf-ptd"/>
                     </connections>
                 </tableViewController>

@@ -12,6 +12,7 @@ import UIKit
 class SettingsTableViewController: UITableViewController{
     
     @IBOutlet weak var bgSwitch: UISwitch!
+    @IBOutlet weak var bgSegment: UISegmentedControl!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,5 +23,9 @@ class SettingsTableViewController: UITableViewController{
     @IBAction func toggleSwitch(_ sender: UISwitch) {
         UserDefaults.standard.set( sender.isOn, forKey: SettingsKey.BG.rawValue)
         UserDefaults.standard.synchronize()
+    }
+    
+    @IBAction func bgSegmentValueChanged(_ sender: UISegmentedControl) {
+        print( sender.selectedSegmentIndex )
     }
 }
