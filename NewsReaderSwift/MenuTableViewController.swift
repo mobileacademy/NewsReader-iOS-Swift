@@ -21,7 +21,9 @@ class MenuTableViewController: UITableViewController{
             return
         }
         
-        let imageView = UIImageView(image: UIImage(named:"bg1.jpg") )
+        let index = UserDefaults.standard.integer(forKey: SettingsKey.BGTheme.rawValue ) + 1
+        
+        let imageView = UIImageView(image: UIImage(named:"bg\(index).jpg") )
         imageView.contentMode = .scaleAspectFill
         
         tableView.backgroundView = imageView

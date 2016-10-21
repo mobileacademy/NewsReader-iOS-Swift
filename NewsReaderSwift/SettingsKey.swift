@@ -11,4 +11,5 @@ import Foundation
 
 enum SettingsKey:String{
     case BG
+    case BGTheme
 }

@@ -18,6 +18,9 @@ class SettingsTableViewController: UITableViewController{
         super.viewWillAppear(animated)
         
         bgSwitch.isOn =  UserDefaults.standard.bool(forKey: SettingsKey.BG.rawValue)
+        
+        let index = UserDefaults.standard.integer(forKey: SettingsKey.BGTheme.rawValue )
+        bgSegment.selectedSegmentIndex = index
     }
     
     @IBAction func toggleSwitch(_ sender: UISwitch) {
@@ -26,6 +29,7 @@ class SettingsTableViewController: UITableViewController{
     }
     
     @IBAction func bgSegmentValueChanged(_ sender: UISegmentedControl) {
-        print( sender.selectedSegmentIndex )
+        UserDefaults.standard.set( sender.selectedSegmentIndex, forKey: SettingsKey.BGTheme.rawValue )
+        UserDefaults.standard.synchronize()
     }
 }
