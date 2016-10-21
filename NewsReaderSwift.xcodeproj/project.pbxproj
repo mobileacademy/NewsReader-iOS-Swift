@@ -71,16 +71,15 @@
 		8E3D93781DA77F0200A033EA /* NewsReaderSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8E72DB261DBA2239008C3E88 /* Controllers */,
 				8E3D93901DA7A2A900A033EA /* Views */,
 				8E3D938B1DA797F700A033EA /* Model */,
 				8E3D93791DA77F0200A033EA /* AppDelegate.swift */,
-				8E3D937B1DA77F0200A033EA /* ViewController.swift */,
 				8E3D937D1DA77F0200A033EA /* Main.storyboard */,
 				8E3D93801DA77F0200A033EA /* Assets.xcassets */,
 				8E3D93821DA77F0200A033EA /* LaunchScreen.storyboard */,
 				8E3D93851DA77F0200A033EA /* Info.plist */,
 				91CFCD5E1DB1576F006B6BB5 /* HackerNews.swift */,
-				91BC08EB1DB2339C0001A0D0 /* BrowserViewController.swift */,
 			);
 			path = NewsReaderSwift;
 			sourceTree = "<group>";
@@ -108,6 +107,15 @@
 				8E3D93921DA7A2EB00A033EA /* StoryCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		8E72DB261DBA2239008C3E88 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91BC08EB1DB2339C0001A0D0 /* BrowserViewController.swift */,
+				8E3D937B1DA77F0200A033EA /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		E9211E605DA15A73B5A6DB37 /* Pods */ = {
