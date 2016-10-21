@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SettingsTableViewController: UITableViewController{
+class SettingsTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var bgSwitch: UISwitch!
     @IBOutlet weak var bgSegment: UISegmentedControl!
@@ -36,7 +36,22 @@ class SettingsTableViewController: UITableViewController{
     @IBAction func chooseTaped(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
         
         present( imagePicker, animated:true )
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+        picker.dismiss(animated: true){
+            let img = info["UIImagePickerControllerOriginalImage"] as! UIImage
+            
+            guard let data = UIImagePNGRepresentation(img) else{
+                return
+            }
+            
+            let path = NSHomeDirectory()+"/Documents/bg.png"
+            
+            try? data.write(to: URL(fileURLWithPath: path) )
+        }
     }
 }
