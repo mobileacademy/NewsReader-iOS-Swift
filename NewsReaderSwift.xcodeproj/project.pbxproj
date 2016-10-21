@@ -20,6 +20,10 @@
 		8E72DB2D1DBA49F7008C3E88 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E72DB2C1DBA49F7008C3E88 /* settings.png */; };
 		8E72DB2F1DBA4FE6008C3E88 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DB2E1DBA4FE6008C3E88 /* SettingsTableViewController.swift */; };
 		8E72DB311DBA54C8008C3E88 /* SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DB301DBA54C8008C3E88 /* SettingsKey.swift */; };
+		8E72DB361DBA55F8008C3E88 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E72DB321DBA55F8008C3E88 /* bg2.jpg */; };
+		8E72DB371DBA55F8008C3E88 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E72DB331DBA55F8008C3E88 /* bg1.jpg */; };
+		8E72DB381DBA55F8008C3E88 /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E72DB341DBA55F8008C3E88 /* bg3.jpg */; };
+		8E72DB391DBA55F8008C3E88 /* bg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E72DB351DBA55F8008C3E88 /* bg4.jpg */; };
 		91BC08EC1DB2339C0001A0D0 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC08EB1DB2339C0001A0D0 /* BrowserViewController.swift */; };
 		91CFCD5F1DB1576F006B6BB5 /* HackerNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFCD5E1DB1576F006B6BB5 /* HackerNews.swift */; };
 		B2A8F4CFD3A2A1B7A3BEEE17 /* Pods_NewsReaderSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E845044B7FB82D08B65FDF /* Pods_NewsReaderSwift.framework */; };
@@ -41,6 +45,10 @@
 		8E72DB2C1DBA49F7008C3E88 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		8E72DB2E1DBA4FE6008C3E88 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8E72DB301DBA54C8008C3E88 /* SettingsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKey.swift; sourceTree = "<group>"; };
+		8E72DB321DBA55F8008C3E88 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		8E72DB331DBA55F8008C3E88 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
+		8E72DB341DBA55F8008C3E88 /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
+		8E72DB351DBA55F8008C3E88 /* bg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg4.jpg; sourceTree = "<group>"; };
 		91BC08EB1DB2339C0001A0D0 /* BrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		91CFCD5E1DB1576F006B6BB5 /* HackerNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNews.swift; sourceTree = "<group>"; };
 		B0DDE834BD6D967DDC4DFF52 /* Pods-NewsReaderSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReaderSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReaderSwift/Pods-NewsReaderSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 		8E72DB2B1DBA4823008C3E88 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				8E72DB321DBA55F8008C3E88 /* bg2.jpg */,
+				8E72DB331DBA55F8008C3E88 /* bg1.jpg */,
+				8E72DB341DBA55F8008C3E88 /* bg3.jpg */,
+				8E72DB351DBA55F8008C3E88 /* bg4.jpg */,
 				8E72DB2C1DBA49F7008C3E88 /* settings.png */,
 			);
 			name = res;
@@ -223,9 +235,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E72DB371DBA55F8008C3E88 /* bg1.jpg in Resources */,
 				8E72DB2D1DBA49F7008C3E88 /* settings.png in Resources */,
+				8E72DB381DBA55F8008C3E88 /* bg3.jpg in Resources */,
+				8E72DB391DBA55F8008C3E88 /* bg4.jpg in Resources */,
 				8E3D93841DA77F0200A033EA /* LaunchScreen.storyboard in Resources */,
 				8E3D93811DA77F0200A033EA /* Assets.xcassets in Resources */,
+				8E72DB361DBA55F8008C3E88 /* bg2.jpg in Resources */,
 				8E3D937F1DA77F0200A033EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
