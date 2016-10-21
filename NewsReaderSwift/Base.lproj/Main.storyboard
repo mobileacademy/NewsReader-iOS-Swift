@@ -287,6 +287,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oqu-EI-iiI" id="BMn-Uz-OeV">
                                             <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9s-EM-7wl">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb6-mr-D5l">
+                                                    <state key="normal" title="Choose"/>
+                                                    <connections>
+                                                        <action selector="chooseTaped:" destination="vDA-mX-hYM" eventType="touchUpInside" id="5iS-zj-nNp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kb6-mr-D5l" firstAttribute="centerY" secondItem="BMn-Uz-OeV" secondAttribute="centerY" id="OSh-0f-gNZ"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="g9s-EM-7wl" secondAttribute="leading" id="UJn-Fu-ZfD"/>
+                                                <constraint firstItem="g9s-EM-7wl" firstAttribute="centerY" secondItem="BMn-Uz-OeV" secondAttribute="centerY" id="bgs-Ka-VMm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kb6-mr-D5l" secondAttribute="trailing" id="ewW-vM-1yB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3sR-sH-5Gb">
@@ -317,6 +336,7 @@
                     <connections>
                         <outlet property="bgSegment" destination="3bS-0a-cWe" id="6yL-AR-qa5"/>
                         <outlet property="bgSwitch" destination="tMC-cF-Or0" id="n2K-Sf-ptd"/>
+                        <outlet property="chooseTapped" destination="OSh-0f-gNZ" id="69S-an-E4q"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QN-gH-xms" userLabel="First Responder" sceneMemberID="firstResponder"/>

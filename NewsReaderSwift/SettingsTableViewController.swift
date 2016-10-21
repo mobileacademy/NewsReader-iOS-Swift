@@ -32,4 +32,8 @@ class SettingsTableViewController: UITableViewController{
         UserDefaults.standard.set( sender.selectedSegmentIndex, forKey: SettingsKey.BGTheme.rawValue )
         UserDefaults.standard.synchronize()
     }
+    
+    @IBAction func chooseTaped(_ sender: UIButton) {
+        
+    }
 }
