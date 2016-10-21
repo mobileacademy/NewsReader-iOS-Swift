@@ -34,6 +34,9 @@ class SettingsTableViewController: UITableViewController{
     }
     
     @IBAction func chooseTaped(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
         
+        present( imagePicker, animated:true )
     }
 }
