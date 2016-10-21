@@ -20,15 +20,20 @@ class MenuTableViewController: UITableViewController{
         }
         
         switch id {
+            case topStoriesId:
+                if let dest = segue.destination as? ViewController {
+                    dest.type = .Top
+                }
+                break
             
-        case topStoriesId:
-            break
+            case latestStoriesId:
+                if let dest = segue.destination as? ViewController {
+                    dest.type = .Latest
+                }
+                break
             
-        case latestStoriesId:
-            break
-            
-        default:
-            return
+            default:
+                return
         }
     }
     

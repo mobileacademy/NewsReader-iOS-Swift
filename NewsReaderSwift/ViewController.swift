@@ -16,23 +16,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
+    public var type:StoryType!
+    
     required init?(coder aDecoder: NSCoder){
         super.init(coder:aDecoder)
+    }
+    
+    fileprivate func fetchCompletionHandler( stories:Array<Story> ){
+        self.stories = stories
+        self.tableView.reloadData()
         
-        HackerNews.instance.fetchTopStory { (stories:Array<Story>) in
-            self.stories = stories
-            self.tableView.reloadData()
-            
-            for (index, story) in stories.enumerated() {
-                HackerNews.instance.fillStory(story, callback: { (story:Story?) in
-                    print(story)
-                    self.stories![index] = story!
-                    DispatchQueue.main.async {
-                        self.tableView.reloadRows(at: [IndexPath(row:index, section:0)], with: .right)
-                    }
-                })
-            }
+        for (index, story) in stories.enumerated() {
+            HackerNews.instance.fillStory(story, callback: { (story:Story?) in
+                print(story)
+                self.stories![index] = story!
+                DispatchQueue.main.async {
+                    self.tableView.reloadRows(at: [IndexPath(row:index, section:0)], with: .right)
+                }
+            })
         }
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        switch( type! ){
+            case .Top:
+                HackerNews.instance.fetchTopStory(fetchCompletionHandler)
+                break
+            case .Latest:
+                HackerNews.instance.fetchLatestStory(fetchCompletionHandler)
+                break
+        }
+        
     }
 
     override func viewDidLoad() {
