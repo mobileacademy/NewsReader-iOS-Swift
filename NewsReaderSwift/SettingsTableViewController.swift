@@ -13,7 +13,14 @@ class SettingsTableViewController: UITableViewController{
     
     @IBOutlet weak var bgSwitch: UISwitch!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        bgSwitch.isOn =  UserDefaults.standard.bool(forKey: "bg")
+    }
+    
     @IBAction func toggleSwitch(_ sender: UISwitch) {
-        print( sender.isOn )
+        UserDefaults.standard.set( sender.isOn, forKey: "bg")
+        UserDefaults.standard.synchronize()
     }
 }
