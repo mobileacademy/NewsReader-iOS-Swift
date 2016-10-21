@@ -43,7 +43,7 @@ class SettingsTableViewController: UITableViewController, UIImagePickerControlle
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         picker.dismiss(animated: true){
-            let img = info["UIImagePickerControllerOriginalImage"] as! UIImage
+            let img = info[UIImagePickerControllerOriginalImage] as! UIImage
             
             guard let data = UIImagePNGRepresentation(img) else{
                 return
