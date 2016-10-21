@@ -9,7 +9,7 @@
 import Foundation
 
 class StoryCollection{
-    private var data:[StoryModel] = []
+    fileprivate var data:[StoryModel] = []
     
     func topStories()->[StoryModel]{
         if data.count < 10 {
@@ -19,7 +19,7 @@ class StoryCollection{
         return Array(data[ 0 ..< 10 ])
     }
     
-    func addStory(story:StoryModel){
+    func addStory(_ story:StoryModel){
         data.append(story)
     }
 }

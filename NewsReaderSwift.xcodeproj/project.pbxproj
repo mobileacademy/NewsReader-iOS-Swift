@@ -140,6 +140,7 @@
 				8E3D93741DA77F0200A033EA /* Resources */,
 				551A840466FFEC73629EF419 /* [CP] Embed Pods Frameworks */,
 				9804B41F8FEE271C2190D5B5 /* [CP] Copy Pods Resources */,
+				8B6EA200BBFB7992024FEE0F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +164,7 @@
 					8E3D93751DA77F0200A033EA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = U25ZWZE6YN;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -207,6 +209,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsReaderSwift/Pods-NewsReaderSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B6EA200BBFB7992024FEE0F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

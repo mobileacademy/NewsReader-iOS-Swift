@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.tableView.reloadData()
             
             for (index, story) in stories.enumerated() {
-                HackerNews.instance.fillStory(story:story, callback: { (story:Story?) in
+                HackerNews.instance.fillStory(story, callback: { (story:Story?) in
                     print(story)
                     self.stories![index] = story!
                     DispatchQueue.main.async {

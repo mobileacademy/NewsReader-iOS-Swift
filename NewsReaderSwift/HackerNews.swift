@@ -58,7 +58,7 @@ class HackerNews {
         }
     }
     
-    func fillStory(story:Story, callback:@escaping (_ story:Story?) -> Void){
+    func fillStory(_ story:Story, callback:@escaping (_ story:Story?) -> Void){
         let url = "https://hacker-news.firebaseio.com/v0/item/\(story.id!).json"
         Alamofire.request(url).responseObject { (response: DataResponse<Story>) in
             guard let story = response.result.value else {
