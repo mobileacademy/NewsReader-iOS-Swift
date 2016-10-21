@@ -44,9 +44,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         switch( type! ){
             case .Top:
                 HackerNews.instance.fetchTopStory(fetchCompletionHandler)
+                self.title = "Top stories"
                 break
             case .Latest:
                 HackerNews.instance.fetchLatestStory(fetchCompletionHandler)
+                self.title = "Latest stories"
                 break
         }
         
