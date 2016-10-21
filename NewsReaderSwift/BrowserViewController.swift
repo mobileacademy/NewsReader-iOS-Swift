@@ -40,6 +40,10 @@ class BrowserViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        guard let indicator = indicator else {
+            return
+        }
+        
         indicator.stopAnimating()
         indicator.removeFromSuperview()
     }
