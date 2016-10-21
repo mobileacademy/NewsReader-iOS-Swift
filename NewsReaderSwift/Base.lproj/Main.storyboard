@@ -204,8 +204,8 @@
         <!--Settings-->
         <scene sceneID="xF8-gM-Fye">
             <objects>
-                <tableViewController title="Settings" id="vDA-mX-hYM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="YQ3-HO-kGN">
+                <tableViewController title="Settings" id="vDA-mX-hYM" customClass="SettingsTableViewController" customModule="NewsReaderSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="YQ3-HO-kGN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -225,6 +225,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vDr-oM-bYr" id="Rqg-qq-XrU">
                                             <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1H5-Dj-yZw">
+                                                    <frame key="frameInset" minX="8" minY="11" width="152" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMC-cF-Or0"/>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tMC-cF-Or0" secondAttribute="trailing" id="6Do-Ed-0zc"/>
+                                                <constraint firstItem="tMC-cF-Or0" firstAttribute="centerY" secondItem="Rqg-qq-XrU" secondAttribute="centerY" id="v21-uN-Dkc"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EnZ-uQ-ZWp">
@@ -275,7 +289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QN-gH-xms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378" y="898"/>
+            <point key="canvasLocation" x="-1378.4000000000001" y="897.30134932533736"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eE9-my-R7L">
@@ -299,6 +313,10 @@
         <scene sceneID="tF5-mH-zjA">
             <objects>
                 <viewController id="GM2-qg-5Gh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uO3-Yo-OLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="xhf-Xz-DKQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uV1-qq-qa1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
