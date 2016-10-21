@@ -233,7 +233,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMC-cF-Or0"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMC-cF-Or0">
+                                                    <connections>
+                                                        <action selector="toggleSwitch:" destination="vDA-mX-hYM" eventType="valueChanged" id="F8Z-EF-iAC"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="tMC-cF-Or0" secondAttribute="trailing" id="6Do-Ed-0zc"/>
@@ -286,6 +290,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="95G-P3-6AH"/>
+                    <connections>
+                        <outlet property="bgSwitch" destination="tMC-cF-Or0" id="n2K-Sf-ptd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QN-gH-xms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

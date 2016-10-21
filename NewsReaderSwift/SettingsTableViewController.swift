@@ -11,4 +11,9 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController{
     
+    @IBOutlet weak var bgSwitch: UISwitch!
+    
+    @IBAction func toggleSwitch(_ sender: UISwitch) {
+        print( sender.isOn )
+    }
 }
