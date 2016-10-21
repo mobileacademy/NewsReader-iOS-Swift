@@ -69,7 +69,9 @@
                             <constraint firstItem="dHq-K7-L26" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="s9U-1z-UKz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Top stories" id="X5o-NY-3gL"/>
+                    <navigationItem key="navigationItem" title="Top stories" id="X5o-NY-3gL">
+                        <barButtonItem key="backBarButtonItem" title="back" id="w2X-6j-j18"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dHq-K7-L26" id="j5G-cy-nzo"/>
                     </connections>
