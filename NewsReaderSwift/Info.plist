@@ -54,6 +54,7 @@
 				<string>TLSv1.2</string>
 			</dict>
 		</dict>
+        <key>NSAllowsArbitraryLoads</key><true/>
 	</dict>
 </dict>
 </plist>
